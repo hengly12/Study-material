@@ -1,0 +1,74 @@
+<div class="navbar-container">
+  <div class="top">
+
+  </div>
+  <div class="background">
+    <ul>
+      <li>About</li>
+      <li [routerLink]="['../location']" routerLinkActive="active">Location</li>
+      <li [routerLink]="['../contact']" routerLinkActive="active">Contact</li>
+    </ul>
+  </div>
+  <div class="bottom">
+
+    <div class="left" [routerLink]="['../components']" routerLinkActive="active" style="cursor: pointer;">
+      <!-- <img src="../../../assets/logo.svg" alt=""> -->
+      <svg id="Capa_1" enable-background="new 0 0 512 512" height="35" viewBox="0 0 512 512" width="35" fill="#fff" xmlns="http://www.w3.org/2000/svg"><g><g><path d="m382.529 313.417h-281.017c-23.239 0-42.146 18.906-42.146 42.146s18.906 42.146 42.146 42.146h352.278c8.284 0 15-6.716 15-15s-6.716-15-15-15h-56.819v-24.291h56.819c8.284 0 15-6.716 15-15s-6.716-15-15-15h-71.261z"/></g><g><path d="m101.512 427.708c-23.239 0-42.146 18.907-42.146 42.146s18.907 42.146 42.146 42.146h352.278c8.284 0 15-6.716 15-15s-6.716-15-15-15h-56.819v-24.292h56.819c8.284 0 15-6.716 15-15s-6.716-15-15-15z"/></g><g><path d="m129.886 253.417h238.385v30h-238.385z"/></g><g><path d="m368.271 223.417v-82.323l-106.019 30.573c-4.078 1.176-8.274 1.764-12.469 1.764s-8.388-.587-12.466-1.764l-107.431-30.971v82.72h238.385z"/></g><g><path d="m445.66 57.955-191.575-57.326c-2.806-.839-5.795-.839-8.601 0l-191.575 57.326c-6.35 1.9-10.7 7.743-10.7 14.371s4.35 12.47 10.7 14.371l191.719 56.146c2.719.784 5.593.784 8.312 0l172.42-50.371v29.792c0 8.284 6.716 15 15 15s15-6.716 15-15v-49.938c-.001-6.628-4.351-12.47-10.7-14.371z"/></g></g></svg>
+    </div>
+
+
+
+    <div class="right">
+
+
+      <ul>
+        <li [routerLink]="['../components']" routerLinkActive="active" style="color: #fff;">Home</li>
+        <li style="color: #fff;" [routerLink]="['../lesson']" routerLinkActive="active">Books</li>
+        <li class="dropdown">
+          <p [routerLink]="['../classes']" routerLinkActive="active" >Class</p>
+          <div class="dropdown-content">
+            <div class="navbar">
+              <div class="dd_menu">
+                <div class="home">
+                  <div class="list-menu">
+                    <p [routerLink]="['../lesson6']" routerLinkActive="active">Grade 1-6</p>
+                    <p [routerLink]="['../lesson7']" routerLinkActive="active">Grade 7</p>
+                    <p [routerLink]="['../lesson8']" routerLinkActive="active">Grade 8</p>
+                    <p [routerLink]="['../lesson9']" routerLinkActive="active">Grade 9</p>
+                    <p [routerLink]="['../lesson10']" routerLinkActive="active">Grade 10</p>
+                    <p [routerLink]="['../lesson11']" routerLinkActive="active">Grade 11</p>
+                    <p [routerLink]="['../lesson12']" routerLinkActive="active">Grade 12</p>
+                    <p>Skill</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li style="color: #fff;">Service</li>
+      </ul>
+      <div class="btn" *ngIf="logContainer">
+        <button [routerLink]="['../login']" routerLinkActive="active">Login</button>
+        <button [routerLink]="['../signup']" routerLinkActive="active">Register</button>
+      </div>
+
+      <div class="profile" *ngIf="profile">
+        <p>{{dataUser?.displayName}}</p>
+        <img mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" [src]="dataUser?.files?.downloadUrl ?? 'assets/user.svg'" alt="">
+        <!-- <mat-icon>more_vert</mat-icon> -->
+      </div>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item [routerLink]="['../editprofile']" routerLinkActive="active">
+          <mat-icon style="color: #5459E8;">person</mat-icon>
+          <span>Edit Profile</span>
+        </button>
+        <div class="sign-out" mat-menu-item (click)="signOut()">
+          <mat-icon style="color: #5459E8;">logout</mat-icon>
+          <span>Sign Out</span>
+          {{inOut}}
+        </div>
+      </mat-menu>
+    </div>
+  </div>
+
+

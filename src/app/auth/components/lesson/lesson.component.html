@@ -1,0 +1,63 @@
+<div class="container">
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+
+
+        <mat-accordion>
+          <mat-expansion-panel style="border-radius: 0; border: 1px solid #fff;">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+               <p style="margin: 0;font-family: 'Noto Sans Khmer', sans-serif;
+               font-size: 16px;padding: 0 10px;">អក្សរសិល្ប៍</p>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;"[routerLink]="['bookstories']" routerLinkActive="active">1.រឿងសូផាត (ល្ខោននិយាយ)</p>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;" [routerLink]="['bookstories1']" routerLinkActive="active">2.រឿងផ្កាស្រពោន (ល្ខោននិយាយ)</p>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;" [routerLink]="['bookstories2']" routerLinkActive="active">3.រឿងមាលាដួងចិត្ត (១-២៩) / សង្ខេបរឿង</p>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;" [routerLink]="['bookstories3']" routerLinkActive="active">4.រឿងកុលាបប៉ៃលិន (ល្ខោននិយាយ)</p>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;" [routerLink]="['bookstories4']" routerLinkActive="active">5.រឿងធនញ្ជ័យ</p>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;" [routerLink]="['bookstories5']" routerLinkActive="active">6.រឿងព្រះអាទិត្យថ្មីរះលើផែនដីចាស់</p>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;" [routerLink]="['bookstories6']" routerLinkActive="active">7.រឿងគូលីកំនែន</p>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;" [routerLink]="['bookstories7']" routerLinkActive="active">8.រឿងភូមិតិរិច្ឆាន</p>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;" [routerLink]="['bookstories8']" routerLinkActive="active">9.រឿងគ្រូបង្រៀនស្រុកស្រែ</p>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;" [routerLink]="['bookstories9']" routerLinkActive="active">10.រឿងមហាចោរទល់ដែន</p>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;" [routerLink]="['bookstories10']" routerLinkActive="active">11.រឿងពុទ្ធិសែន នាងកង្រី</p>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;" [routerLink]="['bookstories11']" routerLinkActive="active">12.រឿងរាមកេរ្ដិ៍ ភាគទី១ ភាគទី២</p>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;" [routerLink]="['bookstories12']" routerLinkActive="active">13.រឿងទុំទាវ</p>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;" [routerLink]="['bookstories13']" routerLinkActive="active">14.រឿងហង្សយន្ដ</p>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;" [routerLink]="['bookstories14']" routerLinkActive="active">15.រឿងចៅស្រទបចេក ភាគទី១ ភាគទី២</p>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;" [routerLink]="['bookstories15']" routerLinkActive="active">16.រឿងកាកី</p>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;" [routerLink]="['bookstories16']" routerLinkActive="active">17.រឿងថៅកែចិត្តចោរ</p>
+          </mat-expansion-panel>
+        </mat-accordion>
+    </mat-drawer>
+      <button type="button" mat-button (click)="drawer.toggle()" style="border: 2px solid #E0E0E0;margin-top: 3px;">
+
+        Open Lesson<i style="padding: 0 3px;" class="fa-solid fa-arrow-right-to-bracket"></i>
+
+      </button>
+    <div class="example-sidenav-content" style="display: flex;flex-direction: column;">
+      <p style="font-family: 'Noto Sans Khmer', sans-serif;
+      font-size: 16px;cursor: pointer; font-size: 30px;" >អក្សរសិល្ប៍</p>
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-drawer-container>
+</div>

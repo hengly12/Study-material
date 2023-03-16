@@ -1,0 +1,116 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.swiper-container{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+
+
+  .img-study{
+
+    height: 100vh;
+    width: 50%;
+    background-color: #00B4A8;
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+
+
+    }
+    .cap-2{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px 0;
+      h3{
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #fff;
+        margin: 0;
+
+      }
+      p{
+        width: 70%;
+        font-size: 16px;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #fff;
+        text-align: center;
+      }
+      button{
+        padding: 8px 20px;
+        border-radius: 3px;
+        border: none;
+        cursor: pointer;
+        font-family: 'Source Sans Pro', sans-serif;
+        background-color: #E6D650;
+      }
+      button:hover{
+        background-color: #A9CE5D;
+        color: #fff;
+      }
+    }
+  }
+  .caption{
+    height: 100vh;
+    width: 50%;
+    background-color: #00B4A8;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    gap: 50px;
+    .cap-1{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 40px;
+      h3{
+
+        font-size: 40px;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #fff;
+      }
+      p{
+        width: 70%;
+        font-size: 16px;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: #fff;
+        text-align: center;
+      }
+    }
+    img{
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px){
+  .swiper-container{
+    height: auto;
+
+
+  }
+  .swiper-container .img-study{
+    width: 100%;
+
+  }
+  .swiper-container .caption{
+    display: none;
+  }
+}
+@media screen and (max-width: 940px){
+
+}

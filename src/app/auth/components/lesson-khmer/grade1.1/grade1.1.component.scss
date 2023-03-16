@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.grade-container{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .video{
+    display: flex;
+    flex-direction: column;
+    .lesson{
+      padding: 20px 0;
+      p{
+        font-family: 'Noto Sans Khmer', sans-serif;
+        font-size: 16px;
+      }
+    }
+
+  }
+
+  p{
+    font-family: 'Noto Sans Khmer', sans-serif;
+    font-size: 16px;
+  }
+  .pdf{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    .class{
+      display: flex;
+      flex-direction: column;
+
+      iframe{
+        height: 200px;
+        width: 150px;
+      }
+      p{
+        font-family: 'Noto Sans Khmer', sans-serif;
+        font-size: 16px;
+      }
+    }
+  }
+}
