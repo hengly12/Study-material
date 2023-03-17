@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './auth/components/about/about.component';
 import { Khmer1Component } from './auth/components/book/khmer1/khmer1.component';
 import { Maths1Component } from './auth/components/book/maths1/maths1.component';
 import { Science1Component } from './auth/components/book/science1/science1.component';
+import { CategoryComponent } from './auth/components/category/category.component';
 import { ComponentsComponent } from './auth/components/components.component';
 import { ContactComponent } from './auth/components/contact/contact.component';
 import { Grade11Component } from './auth/components/lesson-khmer/grade1.1/grade1.1.component';
@@ -141,6 +143,14 @@ const routes: Routes = [
             component: BookStories16Component,
           },
         ]
+      },
+      {
+        path: 'about',
+        component: AboutComponent,
+      },
+      {
+        path: 'category',
+        component: CategoryComponent,
       },
       {
         path: 'lesson6',
