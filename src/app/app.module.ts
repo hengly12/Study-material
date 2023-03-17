@@ -65,6 +65,8 @@ import { BookStories13Component } from './auth/components/stories-khmer/book-sto
 import { BookStories14Component } from './auth/components/stories-khmer/book-stories14/book-stories14.component';
 import { BookStories15Component } from './auth/components/stories-khmer/book-stories15/book-stories15.component';
 import { BookStories16Component } from './auth/components/stories-khmer/book-stories16/book-stories16.component';
+import { AboutComponent } from './auth/components/about/about.component';
+import { CategoryComponent } from './auth/components/category/category.component';
 
 @NgModule({
   declarations: [
@@ -116,7 +118,9 @@ import { BookStories16Component } from './auth/components/stories-khmer/book-sto
     BookStories13Component,
     BookStories14Component,
     BookStories15Component,
-    BookStories16Component
+    BookStories16Component,
+    AboutComponent,
+    CategoryComponent
 
 
   ],
