@@ -1,18 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './auth/components/about/about.component';
+import { AllCoursesComponent } from './auth/components/all-courses/all-courses.component';
 import { Khmer1Component } from './auth/components/book/khmer1/khmer1.component';
 import { Maths1Component } from './auth/components/book/maths1/maths1.component';
 import { Science1Component } from './auth/components/book/science1/science1.component';
 import { CategoryComponent } from './auth/components/category/category.component';
 import { ComponentsComponent } from './auth/components/components.component';
 import { ContactComponent } from './auth/components/contact/contact.component';
-import { Grade11Component } from './auth/components/lesson-khmer/grade1.1/grade1.1.component';
-import { Grade12Component } from './auth/components/lesson-khmer/grade1.2/grade1.2.component';
-import { Grade13Component } from './auth/components/lesson-khmer/grade1.3/grade1.3.component';
-import { Grade14Component } from './auth/components/lesson-khmer/grade1.4/grade1.4.component';
-import { Grade15Component } from './auth/components/lesson-khmer/grade1.5/grade1.5.component';
-import { Grade16Component } from './auth/components/lesson-khmer/grade1.6/grade1.6.component';
+import { CoursePageComponent } from './auth/components/course1/course-page/course-page.component';
+import { Course1Component } from './auth/components/course1/course1.component';
+import { Grade10ExperimentComponent } from './auth/components/experiment-all/grade10-experiment/grade10-experiment.component';
+import { Grade10Component } from './auth/components/Experiment/grade10/grade10.component';
 import { Grade1Component } from './auth/components/lesson-khmer/grade1/grade1.component';
 import { LessonComponent } from './auth/components/lesson/lesson.component';
 import { Lesson10Component } from './auth/components/lesson10/lesson10.component';
@@ -24,23 +23,9 @@ import { Lesson8Component } from './auth/components/lesson8/lesson8.component';
 import { Lesson9Component } from './auth/components/lesson9/lesson9.component';
 import { LocationComponent } from './auth/components/location/location.component';
 import { EditProfileComponent } from './auth/components/profile/profile.component';
+import { RecentCoursesComponent } from './auth/components/recent-courses/recent-courses.component';
+import { SkillComponent } from './auth/components/skill/skill.component';
 import { BookStoriesComponent } from './auth/components/stories-khmer/book-stories/book-stories.component';
-import { BookStories1Component } from './auth/components/stories-khmer/book-stories1/book-stories1.component';
-import { BookStories10Component } from './auth/components/stories-khmer/book-stories10/book-stories10.component';
-import { BookStories11Component } from './auth/components/stories-khmer/book-stories11/book-stories11.component';
-import { BookStories12Component } from './auth/components/stories-khmer/book-stories12/book-stories12.component';
-import { BookStories13Component } from './auth/components/stories-khmer/book-stories13/book-stories13.component';
-import { BookStories14Component } from './auth/components/stories-khmer/book-stories14/book-stories14.component';
-import { BookStories15Component } from './auth/components/stories-khmer/book-stories15/book-stories15.component';
-import { BookStories16Component } from './auth/components/stories-khmer/book-stories16/book-stories16.component';
-import { BookStories2Component } from './auth/components/stories-khmer/book-stories2/book-stories2.component';
-import { BookStories3Component } from './auth/components/stories-khmer/book-stories3/book-stories3.component';
-import { BookStories4Component } from './auth/components/stories-khmer/book-stories4/book-stories4.component';
-import { BookStories5Component } from './auth/components/stories-khmer/book-stories5/book-stories5.component';
-import { BookStories6Component } from './auth/components/stories-khmer/book-stories6/book-stories6.component';
-import { BookStories7Component } from './auth/components/stories-khmer/book-stories7/book-stories7.component';
-import { BookStories8Component } from './auth/components/stories-khmer/book-stories8/book-stories8.component';
-import { BookStories9Component } from './auth/components/stories-khmer/book-stories9/book-stories9.component';
 import { SwiperComponent } from './auth/components/swiper/swiper.component';
 import { FrontMainLayoutComponent } from './auth/layout/front-main-layout/front-main-layout.component';
 import { LoginComponent } from './auth/login/login.component';
@@ -59,6 +44,13 @@ const routes: Routes = [
     component: SignupComponent,
   },
   {
+    path: 'course',
+    component: FrontMainLayoutComponent,
+    children:[
+      { path:':courseTypeKey', component: CoursePageComponent}
+     ]
+  },
+  {
     path: '',
     component: FrontMainLayoutComponent,
     children: [
@@ -71,76 +63,38 @@ const routes: Routes = [
         component: SwiperComponent,
       },
       {
-        path: 'lesson',
-        component: LessonComponent,
+        path: 'skill',
+        component: SkillComponent,
+      },
+      {
+        path: 'recent-courses',
+        component: RecentCoursesComponent,
+      },
+      {
+        path: 'all-courses',
+        component: AllCoursesComponent,
+      },
+      {
+        path: 'grade10-experiment',  component: Grade10ExperimentComponent,
         children:[
+          {
+            path:':id',component: Grade10Component,
+          },
+          {
+            path: 'grade10',
+            component: Grade10Component,
+          },
+        ]
+      },
+      {
+        path: 'lesson',  component: LessonComponent,
+        children:[
+          {
+            path:':id',component: BookStoriesComponent,
+          },
           {
             path: 'bookstories',
             component: BookStoriesComponent,
-          },
-          {
-            path: 'bookstories1',
-            component: BookStories1Component,
-          },
-          {
-            path: 'bookstories2',
-            component: BookStories2Component,
-          },
-          {
-            path: 'bookstories3',
-            component: BookStories3Component,
-          },
-          {
-            path: 'bookstories4',
-            component: BookStories4Component,
-          },
-          {
-            path: 'bookstories5',
-            component: BookStories5Component,
-          },
-          {
-            path: 'bookstories6',
-            component: BookStories6Component,
-          },
-          {
-            path: 'bookstories7',
-            component: BookStories7Component,
-          },
-          {
-            path: 'bookstories8',
-            component: BookStories8Component,
-          },
-          {
-            path: 'bookstories9',
-            component: BookStories9Component,
-          },
-          {
-            path: 'bookstories10',
-            component: BookStories10Component,
-          },
-          {
-            path: 'bookstories11',
-            component: BookStories11Component,
-          },
-          {
-            path: 'bookstories12',
-            component: BookStories12Component,
-          },
-          {
-            path: 'bookstories13',
-            component: BookStories13Component,
-          },
-          {
-            path: 'bookstories14',
-            component: BookStories14Component,
-          },
-          {
-            path: 'bookstories15',
-            component: BookStories15Component,
-          },
-          {
-            path: 'bookstories16',
-            component: BookStories16Component,
           },
         ]
       },
@@ -198,32 +152,11 @@ const routes: Routes = [
         component: Khmer1Component,
         children:[
           {
+            path:':id',component: Grade1Component,
+          },
+          {
             path: 'grade1',
             component: Grade1Component,
-          },
-          {
-            path: 'grade1.1',
-            component: Grade11Component,
-          },
-          {
-            path: 'grade1.2',
-            component: Grade12Component,
-          },
-          {
-            path: 'grade1.3',
-            component: Grade13Component,
-          },
-          {
-            path: 'grade1.4',
-            component: Grade14Component,
-          },
-          {
-            path: 'grade1.5',
-            component: Grade15Component,
-          },
-          {
-            path: 'grade1.6',
-            component: Grade16Component,
           },
         ]
       },

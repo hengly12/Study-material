@@ -251,10 +251,10 @@ body{
 
 
 @media screen and (max-width: 1455px){
-
   body .container .profile-container {
     height: auto;
     width: 60%;
+    margin-top: 140px;
   }
   body .container .profile-container .btn {
     width: 90%;
@@ -316,7 +316,7 @@ body{
 }
 @media screen and (max-width: 600px){
   body .container{
-    margin-top: 190px ;
+    margin-top: 140px ;
   }
   body .container .profile-container{
     height: auto;
@@ -331,7 +331,7 @@ body{
 @media screen and (max-width: 400px){
 
   body .container{
-    margin-top: 270px ;
+    margin-top: 140px ;
   }
 
 }

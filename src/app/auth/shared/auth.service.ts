@@ -25,8 +25,9 @@ relationship:string = '';
     this.fireauth.signInWithEmailAndPassword(email,password).then( () => {
       localStorage.setItem('token', 'true',)
       this.router.navigate(['/components'])
+      console.log('login')
     }, err => {
-      alert("Something went wrong!");
+      alert("No Internet Connected!");
       this.router.navigate(['/login']);
     })
   }

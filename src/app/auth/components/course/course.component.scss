@@ -14,6 +14,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 50px 0;
     gap: 10px;
     h3{
       margin: 0;
@@ -25,6 +26,7 @@
       font-size: 16px;
       font-family: 'Source Sans Pro', sans-serif;
       text-align: center;
+      margin: 0;
     }
   }
 
@@ -36,7 +38,7 @@
     align-items: center;
     justify-content: center;
     .course-box{
-      height: 40vh;
+      // height: 40vh;
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -172,10 +174,13 @@
 }
 
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1000px){
   .course-container{
-    height: auto;
+    height: 100vh;
     width: 100%;
+  }
+  .course-container .caption{
+    height: auto;
   }
   .course-container .parent{
     height: auto;
@@ -201,4 +206,11 @@
     width: 100%;
   }
 }
+@media screen and (max-width: 500px){
+  .course-container .parent {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 
+}

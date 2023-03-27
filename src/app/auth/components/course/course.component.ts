@@ -19,6 +19,7 @@ export class CourseComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+
     this.fireauth.authState.subscribe((user) => {
       console.log('user', user);
       if (user) {
@@ -95,6 +96,14 @@ export class CourseComponent implements OnInit {
       this.router.navigate(['login'])
     } else{
       this.router.navigate(['../lesson12'])
+    }
+  }
+  isClick7(){
+
+    if(this.dataUser?.key == null){
+      this.router.navigate(['login'])
+    } else{
+      this.router.navigate(['../skill'])
     }
   }
 }

@@ -26,12 +26,6 @@ import { Khmer1Component } from './auth/components/book/khmer1/khmer1.component'
 import { Maths1Component } from './auth/components/book/maths1/maths1.component';
 import { Science1Component } from './auth/components/book/science1/science1.component';
 import { Grade1Component } from './auth/components/lesson-khmer/grade1/grade1.component';
-import { Grade11Component } from './auth/components/lesson-khmer/grade1.1/grade1.1.component';
-import { Grade12Component } from './auth/components/lesson-khmer/grade1.2/grade1.2.component';
-import { Grade13Component } from './auth/components/lesson-khmer/grade1.3/grade1.3.component';
-import { Grade14Component } from './auth/components/lesson-khmer/grade1.4/grade1.4.component';
-import { Grade15Component } from './auth/components/lesson-khmer/grade1.5/grade1.5.component';
-import { Grade16Component } from './auth/components/lesson-khmer/grade1.6/grade1.6.component';
 import { FooterComponent } from './auth/components/footer/footer.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
@@ -49,24 +43,19 @@ import { ContactComponent } from './auth/components/contact/contact.component';
 import { SwiperAutoComponent } from './auth/components/swiper-auto/swiper-auto.component';
 import { LessonComponent } from './auth/components/lesson/lesson.component';
 import { BookStoriesComponent } from './auth/components/stories-khmer/book-stories/book-stories.component';
-import { BookStories1Component } from './auth/components/stories-khmer/book-stories1/book-stories1.component';
-import { BookStories2Component } from './auth/components/stories-khmer/book-stories2/book-stories2.component';
-import { BookStories3Component } from './auth/components/stories-khmer/book-stories3/book-stories3.component';
-import { BookStories4Component } from './auth/components/stories-khmer/book-stories4/book-stories4.component';
-import { BookStories5Component } from './auth/components/stories-khmer/book-stories5/book-stories5.component';
-import { BookStories6Component } from './auth/components/stories-khmer/book-stories6/book-stories6.component';
-import { BookStories7Component } from './auth/components/stories-khmer/book-stories7/book-stories7.component';
-import { BookStories8Component } from './auth/components/stories-khmer/book-stories8/book-stories8.component';
-import { BookStories9Component } from './auth/components/stories-khmer/book-stories9/book-stories9.component';
-import { BookStories10Component } from './auth/components/stories-khmer/book-stories10/book-stories10.component';
-import { BookStories11Component } from './auth/components/stories-khmer/book-stories11/book-stories11.component';
-import { BookStories12Component } from './auth/components/stories-khmer/book-stories12/book-stories12.component';
-import { BookStories13Component } from './auth/components/stories-khmer/book-stories13/book-stories13.component';
-import { BookStories14Component } from './auth/components/stories-khmer/book-stories14/book-stories14.component';
-import { BookStories15Component } from './auth/components/stories-khmer/book-stories15/book-stories15.component';
-import { BookStories16Component } from './auth/components/stories-khmer/book-stories16/book-stories16.component';
 import { AboutComponent } from './auth/components/about/about.component';
 import { CategoryComponent } from './auth/components/category/category.component';
+import { SkillComponent } from './auth/components/skill/skill.component';
+import { RecentCoursesComponent } from './auth/components/recent-courses/recent-courses.component';
+import { AllCoursesComponent } from './auth/components/all-courses/all-courses.component';
+import { Grade10Component } from './auth/components/Experiment/grade10/grade10.component';
+import { Grade12Component } from './auth/components/Experiment/grade12/grade12.component';
+import { Grade10ExperimentComponent } from './auth/components/experiment-all/grade10-experiment/grade10-experiment.component';
+import { CoursePageComponent } from './auth/components/course1/course-page/course-page.component';
+import { Course1Component } from './auth/components/course1/course1.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -87,12 +76,6 @@ import { CategoryComponent } from './auth/components/category/category.component
     Maths1Component,
     Science1Component,
     Grade1Component,
-    Grade11Component,
-    Grade12Component,
-    Grade13Component,
-    Grade14Component,
-    Grade15Component,
-    Grade16Component,
     FooterComponent,
     LoginComponent,
     SignupComponent,
@@ -103,26 +86,16 @@ import { CategoryComponent } from './auth/components/category/category.component
     SwiperAutoComponent,
     LessonComponent,
     BookStoriesComponent,
-    BookStories1Component,
-    BookStories2Component,
-    BookStories3Component,
-    BookStories4Component,
-    BookStories5Component,
-    BookStories6Component,
-    BookStories7Component,
-    BookStories8Component,
-    BookStories9Component,
-    BookStories10Component,
-    BookStories11Component,
-    BookStories12Component,
-    BookStories13Component,
-    BookStories14Component,
-    BookStories15Component,
-    BookStories16Component,
     AboutComponent,
-    CategoryComponent
-
-
+    CategoryComponent,
+    SkillComponent,
+    RecentCoursesComponent,
+    AllCoursesComponent,
+    Grade10Component,
+    Grade12Component,
+    Grade10ExperimentComponent,
+    CoursePageComponent,
+    Course1Component,
   ],
   imports: [
     BrowserModule,

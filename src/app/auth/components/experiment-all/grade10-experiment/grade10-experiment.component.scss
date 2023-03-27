@@ -1,0 +1,27 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.mat-tab-group {
+  margin-bottom: 48px;
+}
+.example-container {
+  height: 100vh;
+
+  width: 100%;
+
+}
+
+.example-sidenav-content {
+  display: flex;
+  // height: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.example-sidenav {
+
+  width: 20%;
+}
