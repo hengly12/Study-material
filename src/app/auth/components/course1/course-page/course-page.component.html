@@ -1,0 +1,16 @@
+<div class="lesson-container">
+  <h4>Please click on the subject below to view the lesson</h4>
+  <div class="grade-1" *ngFor="let item of courseData">
+    <p>{{item?.name}}</p>
+    <div class="box-grade">
+
+      <div class="box" *ngFor="let i of item?.courses" (click)="isClick()">
+        <img src="../../../../../assets/garde8.1.png" alt="">
+        <span>
+          {{i?.name}}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+

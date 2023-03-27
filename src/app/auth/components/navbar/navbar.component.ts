@@ -26,6 +26,25 @@ export class NavbarComponent implements OnInit {
 
 
   ngOnInit(): void {
+
+    // this.fireauth.onAuthStateChanged(res=>{
+    //   console.log('res',res)
+    //   if(res){
+    //     this.uid = res.uid;
+    //     this.afs.collection("user").doc(this.uid).valueChanges().subscribe(res => {
+    //       console.log('userID', res);
+    //       this.dataUser = res;
+    //       if (this.dataUser != '') {
+    //         this.logContainer = !this.logContainer;
+    //         this.profile = !this.profile;
+    //       } else {
+    //         this.logContainer = true;
+    //         this.profile = !this.profile;
+    //       }
+    //     })
+    //   }
+    // })
+
     this.fireauth.authState.subscribe((user) => {
 
       console.log('user', user);
@@ -142,7 +161,7 @@ export class NavbarComponent implements OnInit {
   }
 
   reloadPage() {
-    window.location.reload();
+   window.location.reload();
  }
 
 

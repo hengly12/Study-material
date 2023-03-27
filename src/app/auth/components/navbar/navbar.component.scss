@@ -36,6 +36,9 @@
         font-family: 'Source Sans Pro', sans-serif;
         cursor: pointer;
       }
+      li:hover{
+        color: #bbb9b9;
+      }
 
     }
 
@@ -334,4 +337,15 @@
     padding: 0 10px;
     margin-top: 10px;
   }
+  .navbar-container .top{
+    display: none;
+
+  }
+  .navbar-container .background{
+    display: none;
+  }
+  .navbar-container{
+    height: 10vh;
+  }
 }
+

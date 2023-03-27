@@ -1,45 +1,52 @@
 import { GENDER } from './../../../dummy/country';
-import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ElementRef,
+  ViewChild,
+  OnDestroy,
+} from '@angular/core';
 
-import {COMMA, ENTER} from '@angular/cdk/keycodes';
+import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { FormControl, FormGroup } from '@angular/forms';
-import { STATUS} from 'src/app/dummy/country';
+import { STATUS } from 'src/app/dummy/country';
 import { PROVINCE } from 'src/app/dummy/country';
 import { AuthService } from '../../shared/auth.service';
-import {Observable} from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
-import {endWith, map, startWith} from 'rxjs/operators';
+import { endWith, map, startWith } from 'rxjs/operators';
 import { FireStorageService } from '../../shared/services/fire-storage-service.service';
 import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss']
+  styleUrls: ['./profile.component.scss'],
 })
-export class EditProfileComponent implements OnInit {
+export class EditProfileComponent implements OnInit, OnDestroy {
   uid: string = '';
   dataUser: any = null;
   STATUS = STATUS;
   GENDER = GENDER;
   PROVINCE = PROVINCE;
 
+  subscribeAuth: Subscription | null = null;
+
   /////uploade/////
-  message: string='';
-  preview: string='';
-  progress: number=0;
-  selectedFiles: any[]=[];
+  message: string = '';
+  preview: string = '';
+  progress: number = 0;
+  selectedFiles: any[] = [];
   upload = true;
   uploaded = false;
   currentFile: File | undefined;
   $events: any;
-  START_UPLOAD: boolean=false;
+  START_UPLOAD: boolean = false;
   uploadPercent?: any;
 
-  loading:boolean= false;
+  loading: boolean = false;
 
   profileForm = new FormGroup({
     last_name: new FormControl(''),
@@ -50,25 +57,22 @@ export class EditProfileComponent implements OnInit {
     birthday: new FormControl(''),
     hometown: new FormControl(''),
     phone: new FormControl(''),
-    nameof:new FormControl(''),
+    nameof: new FormControl(''),
     relationship: new FormControl(''),
-    });
+  });
 
   inputFile: any;
 
-
   constructor(
-    private fireauth : AngularFireAuth,
+    private fireauth: AngularFireAuth,
     private afs: AngularFirestore,
     private as: AuthService,
     private storage: FireStorageService,
-    private router : Router,
-  ) {
-  }
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
-
- ////////////////////////////////////submit //////////////////////////////////////
+    //////////////////////////////////submit //////////////////////////////////////
     this.fireauth.authState.subscribe( user => {
 
       if(user){
@@ -107,31 +111,30 @@ export class EditProfileComponent implements OnInit {
     })
 
     })
-
   }
 
   compareWithFn(item1: any, item2: any) {
     return item1 && item2 ? item1.key === item2.key : item1 === item2;
   }
 
-  onChangeCountry(event: any){
+  onChangeCountry(event: any) {
     console.log('evento', event?.target?.value);
-
   }
 
-  async onSave(f: any){
-    this.loading=true;
+  async onSave(f: any) {
+    this.loading = true;
     const key = this.afs.createId();
     const data = {
       key: this.dataUser?.key ? this.dataUser?.key : key,
-      create_at: this.dataUser?.create_at ? this.dataUser?.create_at : new Date(),
+      create_at: this.dataUser?.create_at
+        ? this.dataUser?.create_at
+        : new Date(),
       files: this.dataUser?.files ? this.dataUser?.files : null,
-      ...f
-    }
+      ...f,
+    };
     console.log('onsave');
 
-    const selectedCoverFiles:any[]=[];
-
+    const selectedCoverFiles: any[] = [];
 
     if (this.selectedFiles.length > 0) {
       for (let index = 0; index < this.selectedFiles.length; index++) {
@@ -141,17 +144,16 @@ export class EditProfileComponent implements OnInit {
         const soundTask = this.storage.uploadSelectedFile(file, soundPath);
 
         this.uploadPercent = soundTask.percentageChanges();
-        const downloadURL: any = (await soundTask.then(async (f) => {
-          return f.ref.getDownloadURL()
-        }));
-
+        const downloadURL: any = await soundTask.then(async (f) => {
+          return f.ref.getDownloadURL();
+        });
 
         let fileType = file.type.split('/').slice(0, -1).join('/');
-        const imf ={
+        const imf = {
           phone: file.phone,
           nameof: file.nameof,
           relationship: file.relationship,
-        }
+        };
         const files = {
           key: this.afs.createId(),
           filename: soundPath,
@@ -160,72 +162,66 @@ export class EditProfileComponent implements OnInit {
           fileType: file.type,
           type: fileType,
           fileSize: file.size,
-        }
+        };
 
         // this.afs.collection("user").doc().set(imf, {merge: true})
-        selectedCoverFiles.push(files)
+        selectedCoverFiles.push(files);
         this.START_UPLOAD = false;
       }
       data.files = selectedCoverFiles[0];
-
     }
-    this.loading=false;
-    this.as.updateUser(data)
+    this.loading = false;
+    this.as.updateUser(data);
     this.router.navigate(['/components']);
-    alert("Your profile was updated '3'")
+    alert("Your profile was updated '3'");
   }
 
-  saveImf(user: any){
-    const imf ={
+  saveImf(user: any) {
+    const imf = {
       phone: user.phone,
       nameof: user.nameof,
       relationship: user.relationship,
-    }
-    this.afs.collection("user").doc(user.key).set(imf, {merge: true})
+    };
+    this.afs.collection('user').doc(user.key).set(imf, { merge: true });
   }
 
+  ////////////////////////////////////upload image //////////////////////////////////////
 
-////////////////////////////////////upload image //////////////////////////////////////
+  selectFile(event: any): void {
+    this.message = '';
+    this.preview = '';
+    this.progress = 0;
+    this.selectedFiles = event?.target?.files;
 
-selectFile(event: any): void {
+    if (this.selectedFiles) {
+      const file: File | null = this.selectedFiles[0];
 
-  this.message = '';
-  this.preview = '';
-  this.progress = 0;
-  this.selectedFiles = event?.target?.files;
+      if (file) {
+        this.preview = '';
+        this.currentFile = file;
 
+        const reader = new FileReader();
 
-  if (this.selectedFiles) {
-    const file: File | null = this.selectedFiles[0];
+        reader.onload = (e: any) => {
+          this.preview = e.target.result;
+          if (this.preview != '') {
+            this.upload = false;
+            this.uploaded = true;
+          }
+        };
 
-
-
-    if (file) {
-      this.preview = '';
-      this.currentFile = file;
-
-      const reader = new FileReader();
-
-      reader.onload = (e: any) => {
-        this.preview = e.target.result;
-        if (this.preview != '') {
-          this.upload = false;
-          this.uploaded = true;
-        }
-      };
-
-      reader.readAsDataURL(this.currentFile);
-
-
+        reader.readAsDataURL(this.currentFile);
+      }
     }
   }
 
-}
+  displaywith(o1: any, o2: any) {
+    if (o1 && o2) {
+      return;
+    }
+  }
 
-displaywith(o1: any, o2: any){
-  if(o1 && o2){
-    return
+  ngOnDestroy(): void {
+    this.subscribeAuth?.unsubscribe();
   }
 }
-}
-

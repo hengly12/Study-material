@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BOOK_LESSON } from 'src/app/dummy/data';
 
 @Component({
   selector: 'app-lesson',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lesson.component.scss']
 })
 export class LessonComponent implements OnInit {
+
+  bookLessonData = BOOK_LESSON
 
   constructor() { }
 

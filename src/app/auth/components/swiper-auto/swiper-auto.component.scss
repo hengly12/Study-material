@@ -11,7 +11,7 @@ body {
     h3{
       font-size: 50px;
       margin: 0;
-      color: #3f3d3d;
+      color: #0F0F0F;
     }
   }
 }
@@ -37,7 +37,7 @@ $animationSpeed: 40s;
 	margin: auto;
 	overflow:hidden;
 	position: relative;
-	width: 960px;
+	width: 60%;
 
 	&::before,
 	&::after {
@@ -70,4 +70,15 @@ $animationSpeed: 40s;
 		height: 100px;
 		width: 250px;
 	}
+}
+@media screen and (max-width: 1000px){
+  body{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+
+  }
+  .slider{
+    width: 100%;
+  }
 }
