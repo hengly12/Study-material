@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
-import { COURSE, GRADE_LEVEL } from 'src/app/dummy/data-khmer';
+import { COURSE, Course_TypeKey, GRADE_LEVEL } from 'src/app/dummy/data-khmer';
 
 @Component({
   selector: 'app-course-page',
@@ -11,6 +11,8 @@ import { COURSE, GRADE_LEVEL } from 'src/app/dummy/data-khmer';
 })
 export class CoursePageComponent implements OnInit {
   courseData:any[] = []
+  Course_TypeKey = Course_TypeKey
+  // Course_lessons = Course_Lessons
   dataUser: any ;
   uid: string = '';
   inOut:string='';

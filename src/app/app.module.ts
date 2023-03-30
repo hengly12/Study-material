@@ -53,6 +53,7 @@ import { Grade12Component } from './auth/components/Experiment/grade12/grade12.c
 import { Grade10ExperimentComponent } from './auth/components/experiment-all/grade10-experiment/grade10-experiment.component';
 import { CoursePageComponent } from './auth/components/course1/course-page/course-page.component';
 import { Course1Component } from './auth/components/course1/course1.component';
+import { CoursesLessonComponent } from './auth/components/course1/course-page/courses-lesson/courses-lesson.component';
 
 
 
@@ -96,6 +97,7 @@ import { Course1Component } from './auth/components/course1/course1.component';
     Grade10ExperimentComponent,
     CoursePageComponent,
     Course1Component,
+    CoursesLessonComponent,
   ],
   imports: [
     BrowserModule,
