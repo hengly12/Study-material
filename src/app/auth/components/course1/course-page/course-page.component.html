@@ -3,14 +3,15 @@
   <div class="grade-1" *ngFor="let item of courseData">
     <p>{{item?.name}}</p>
     <div class="box-grade">
-
       <div class="box" *ngFor="let i of item?.courses" (click)="isClick()">
-        <img src="../../../../../assets/garde8.1.png" alt="">
+        <img *ngFor="let item of Course_TypeKey" [routerLink]="item?.url"  [src]="i?.photo" alt="">
         <span>
-          {{i?.name}}
+          <!-- {{i?.name}} -->
         </span>
       </div>
     </div>
   </div>
 </div>
+
+
 

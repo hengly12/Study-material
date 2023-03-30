@@ -9,6 +9,7 @@ import { CategoryComponent } from './auth/components/category/category.component
 import { ComponentsComponent } from './auth/components/components.component';
 import { ContactComponent } from './auth/components/contact/contact.component';
 import { CoursePageComponent } from './auth/components/course1/course-page/course-page.component';
+import { CoursesLessonComponent } from './auth/components/course1/course-page/courses-lesson/courses-lesson.component';
 import { Course1Component } from './auth/components/course1/course1.component';
 import { Grade10ExperimentComponent } from './auth/components/experiment-all/grade10-experiment/grade10-experiment.component';
 import { Grade10Component } from './auth/components/Experiment/grade10/grade10.component';
@@ -47,8 +48,13 @@ const routes: Routes = [
     path: 'course',
     component: FrontMainLayoutComponent,
     children:[
-      { path:':courseTypeKey', component: CoursePageComponent}
-     ]
+      { path:':courseTypeKey', component: CoursePageComponent,
+        children:[
+          { path:':courseTypeLesson', component: CoursesLessonComponent}
+        ]
+      }
+
+    ]
   },
   {
     path: '',
