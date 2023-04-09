@@ -15,6 +15,7 @@ export class NavbarComponent implements OnInit {
   dataUser: any ;
   uid: string = '';
   inOut:string='';
+  drawer: any;
   // router: any;
   constructor(
     private fireauth : AngularFireAuth,
@@ -22,8 +23,6 @@ export class NavbarComponent implements OnInit {
     private router: Router,
 
   ) {}
-
-
 
   ngOnInit(): void {
 
@@ -66,9 +65,18 @@ export class NavbarComponent implements OnInit {
     });
 
   }
+
   isMenu:boolean = false;
   menuo= true;
   menuc= false;
+
+  toggleMenu(){
+    this.isMenu = !this.isMenu;
+    this.menuo = !this.menuo;
+    this.menuc = !this.menuc;
+
+  }
+
 
   isClick1(){
 
@@ -145,11 +153,7 @@ export class NavbarComponent implements OnInit {
   }
 
 
-  toggleMenu(){
-    this.isMenu = !this.isMenu;
-    this.menuo = !this.menuo;
-    this.menuc = !this.menuc;
-  }
+
   signOut(){
     this.fireauth.signOut().then( () =>{
       // '/auth/login' ||

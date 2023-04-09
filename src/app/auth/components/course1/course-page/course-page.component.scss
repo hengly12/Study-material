@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .lesson-container{
-  height: 100vh;
+  height: auto;
   width: 100%;
   h4{
     padding:  10px 180px;
@@ -18,8 +18,6 @@
     display: flex;
     flex-direction: column;
 
-    gap: 0px;
-    // background-color: red;
     p{
       padding:0 180px;
       font-size: 18px;
@@ -27,18 +25,17 @@
       font-family: 'Source Sans Pro', sans-serif;
     }
     .box-grade{
-      height: 40vh;
-      width: 100%;
-
-      // display: grid;
-      // grid-template-columns: repeat(3, 1fr);
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      gap: 20px;
-
+      padding: 20px 0;
       .box{
+        // width: 100%;
+        display: flex;
+        flex-direction: row;
+
+        gap: 10px;
         img{
           border: 3px solid #3B3B68;
           border-radius: 3px;
@@ -51,3 +48,19 @@
   }
 }
 
+// .lesson-container{
+//   height: auto;
+//   width: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   .grade-1{
+//     display: flex;
+//     flex-direction: row;
+//     .box-grade{
+//       display: flex;
+//       flex-direction: row;
+//     }
+//   }
+// }

@@ -105,12 +105,17 @@
   }
   .swiper-container .img-study{
     width: 100%;
-
+    height: auto;
   }
   .swiper-container .caption{
     display: none;
   }
 }
-@media screen and (max-width: 940px){
-
+@media screen and (max-width: 500px){
+  .swiper-container .img-study .cap-2 h3{
+   font-size: 28px;
+  }
+  .swiper-container .img-study .cap-2 p{
+   font-size: 13px;
+  }
 }

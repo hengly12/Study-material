@@ -16,6 +16,7 @@ button{
   justify-content: center;
   align-items: center;
   background-color: #19070788;
+  position: fixed;
 }
 
 .uploader-status ::ng-deep .mat-progress-spinner circle, .mat-spinner circle {
