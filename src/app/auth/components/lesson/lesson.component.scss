@@ -1,6 +1,6 @@
 *{
   margin: 0;
-  padding: 0;
+  // padding: 0;
   box-sizing: border-box;
 }
 .mat-tab-group {
@@ -24,4 +24,10 @@
 .example-sidenav {
 
   width: 20%;
+}
+@media screen and (max-width: 1000px){
+  .container mat-drawer{
+    width: 50%;
+  }
+
 }

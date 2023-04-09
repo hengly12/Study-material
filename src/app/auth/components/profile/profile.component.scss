@@ -81,7 +81,7 @@ body{
             background: #EEF0F2;
             border: 1px solid #838A90;
             cursor: pointer;
-            z-index: 2;
+            z-index: 1;
 
             i{
               font-size: 10px;
@@ -325,8 +325,18 @@ body{
   body .container .profile-container .btn {
     width: 90%;
   }
-
-
+  body .container .profile-container .profile .image img{
+    height: 110px;
+    width: 110px;
+  }
+  body .container .profile-container .profile .image .icon {
+    margin-left: 70px ;
+    height: 30px;
+    width: 30px;
+  }
+  body .container .profile-container .profile .image .icon i{
+    font-size: 14px;
+  }
 }
 @media screen and (max-width: 400px){
 

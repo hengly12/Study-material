@@ -49,11 +49,14 @@ const routes: Routes = [
     component: FrontMainLayoutComponent,
     children:[
       { path:':courseTypeKey', component: CoursePageComponent,
-        children:[
-          { path:':courseTypeLesson', component: CoursesLessonComponent}
-        ]
       }
 
+    ]
+  },
+  {
+    path:'course/:courseTypeKey/:courseKey',component: FrontMainLayoutComponent,children:[
+      {path:'',redirectTo:'na',pathMatch:'full'},
+      {path:':lessonKey', component: CoursesLessonComponent}
     ]
   },
   {

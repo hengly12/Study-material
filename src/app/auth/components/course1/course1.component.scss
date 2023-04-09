@@ -95,225 +95,37 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-// .course-container{
-//   height: 100vh;
-//   width: 100%;
-//   // background-color: red;
-//   .caption{
-//     height: 20vh;
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     padding: 50px 0;
-//     gap: 10px;
-//     h3{
-//       margin: 0;
-//       font-size: 40px;
-//       font-family: 'Source Sans Pro', sans-serif;
-//     }
-//     p{
-//       width: 50%;
-//       font-size: 16px;
-//       font-family: 'Source Sans Pro', sans-serif;
-//       text-align: center;
-//       margin: 0;
-//     }
-//   }
-
-//   .parent{
-//     height: 65vh;
-//     width: 100%;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     .course-box{
-//       // height: 40vh;
-//       width: 100%;
-//       display: grid;
-//       grid-template-columns: repeat(4,1fr);
-//       align-items: center;
-//       justify-content: center;
-//       gap: 30px;
-//       .box-1{
-//         height: 200px;
-//         width: 20%;
-//         background: linear-gradient(to left,  #3B3B68,#00B4A8);
-//         border-radius: 3px;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: space-evenly;
-
-//         cursor: pointer;
-//         p{
-//           font-size: 50px;
-//           color: #fff;
-//           font-family: 'Golos Text', sans-serif;
-//           position: relative;
-//           margin-top: 70px;
-
-//         }
-//         p::before{
-//           content: '';
-//           position: absolute;
-//           width: 100%;
-//           height: 4px;
-//           border-radius: 15px;
-//           background-color: #fff;
-//           bottom: 0;
-//           top: 32px;
-//           left: 0;
-//           transform-origin: right;
-//           transform: scaleX(0);
-//           transition: transform .3s ease-in-out;
-//         }
-//         p:hover::before{
-//           transform-origin: left;
-//           transform: scaleX(1);
-//         }
-//         .grade{
-//           height: 10vh;
-//           width: 100%;
-//           background-color: #3A3B68;
-//           display: flex;
-//           align-items: center;
-//           justify-content: center;
-//           border-radius: 3px;
-//           margin-top: 27px;
-//           p{
-//             font-size: 25px;
-//             color: #fff;
-//             font-family: 'Golos Text', sans-serif;
-//             position: relative;
-//             margin-top: 10px;
-//           }
-//         }
-//       }
-
-//     }
-//     .course-box-2{
-//       height: 40vh;
-//       width: 100%;
-//       display: flex;
-//       flex-direction: row;
-//       align-items: center;
-//       justify-content: center;
-//       gap: 30px;
-
-//       .box-2{
-//         height: 200px;
-//         width: 20%;
-//         background: linear-gradient(to left,  #3B3B68,#00B4A8);
-//         border-radius: 3px;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         justify-content: space-evenly;
-
-//         cursor: pointer;
-//         p{
-//           font-size: 50px;
-//           color: #fff;
-//           font-family: 'Golos Text', sans-serif;
-//           position: relative;
-//           margin-top: 70px;
-
-//         }
-//         p::before{
-//           content: '';
-//           position: absolute;
-//           width: 100%;
-//           height: 4px;
-//           border-radius: 15px;
-//           background-color: #fff;
-//           bottom: 0;
-//           top: 32px;
-//           left: 0;
-//           transform-origin: right;
-//           transform: scaleX(0);
-//           transition: transform .3s ease-in-out;
-//         }
-//         p:hover::before{
-//           transform-origin: left;
-//           transform: scaleX(1);
-//         }
-//         .grade{
-//           height: 10vh;
-//           width: 100%;
-//           background-color: #3A3B68;
-//           display: flex;
-//           align-items: center;
-//           justify-content: center;
-//           border-radius: 3px;
-//           margin-top: 27px;
-//           p{
-//             font-size: 25px;
-//             color: #fff;
-//             font-family: 'Golos Text', sans-serif;
-//             position: relative;
-//             margin-top: 10px;
-//           }
-//         }
-//       }
-//     }
-//   }
-
-
-
-// }
-
-
-// @media screen and (max-width: 1000px){
-//   .course-container{
-//     height: 100vh;
-//     width: 100%;
-//   }
-//   .course-container .caption{
-//     height: auto;
-//   }
-//   .course-container .parent{
-//     height: auto;
-//     width: 100%;
-//     display: flex;
-//     flex-direction: row;
-
-//   }
-//   .course-container .parent .course-box{
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//   }
-//   .course-container .parent .course-box .box-1{
-
-//     width: 100%;
-//   }
-//   .course-container .parent .course-box-2{
-//     display: flex;
-//     flex-direction: column;
-//   }
-//   .course-container .parent .course-box-2 .box-2{
-//     width: 100%;
-//   }
-// }
-// @media screen and (max-width: 500px){
-//   .course-container .parent {
-//     width: 100%;
-//     display: grid;
-//     grid-template-columns: 1fr;
-//   }
-
-// }
+@media screen and (max-width: 1000px){
+  .courses-container{
+    height: auto;
+  }
+  .courses-container .caption{
+    height: auto;
+  }
+  .courses-container .course-box{
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    place-items: center;
+    row-gap: 10px;
+  }
+}
+@media screen and (max-width: 500px){
+  .courses-container{
+    height:auto;
+  }
+  .courses-container .course-box{
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    place-items: center;
+    row-gap: 10px;
+  }
+  .courses-container .caption h3{
+    font-size: 28px;
+  }
+  .courses-container .caption p{
+    font-size: 13px;
+  }
+}

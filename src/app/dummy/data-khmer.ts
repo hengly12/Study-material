@@ -71,17 +71,16 @@ export const Course_Type = [
   { name:'Skill',key: '8',url: '/course/8'},
 ]
 
-export const Course_TypeKey = [
+export const Course_KeyType = [
   { name:'GRADE 1-6',key: '1',url: '/lesson/1'},
   { name:'GRADE 7',key: '2',url: '/lesson/2'},
-
 ]
 
 export const GRADE_LESSON = {
   grade6:{ name:'ថ្នាក់ទី 6',key: '1', course_type: Course_Type[0]},
-
   grade7:{ name:'ថ្នាក់ទី 7',key: '2', course_type: Course_Type[1]},
 }
+
 export const LESSONS = [
   {name: 'ភាសាខ្មែរថ្នាក់ទី 1',photo:'assets/grade7.5.png', key: 'course_1', grade_level: GRADE_LESSON.grade6},
   {name: 'ភាសាខ្មែរថ្នាក់ទី 2',photo:'assets/grade7.5.png', key: 'course_2', grade_level: GRADE_LESSON.grade7},
@@ -95,34 +94,86 @@ export const GRADE_LEVEL = {
   grade4:{ name:'ថ្នាក់ទី 4',key: '4', course_type: Course_Type[0]},
   grade5:{ name:'ថ្នាក់ទី 5',key: '5', course_type: Course_Type[0]},
   grade6:{ name:'ថ្នាក់ទី 6',key: '6', course_type: Course_Type[0]},
-
-  grade7:{ name:'ថ្នាក់ទី 7',key: '2', course_type: Course_Type[1]},
-  grade18:{ name:'ថ្នាក់ទី 22',key: '2', course_type: Course_Type[1]},
-  grade8:{ name:'ថ្នាក់ទី 8',key: '1', course_type: Course_Type[2]},
-  grade13:{ name:'',key: '1', course_type: Course_Type[2]},
-  grade9:{ name:'ថ្នាក់ទី 9',key: '1', course_type: Course_Type[3]},
-  grade19:{ name:'',key: '1', course_type: Course_Type[3]},
-  grade10:{ name:'ថ្នាក់ទី 10',key: '1', course_type: Course_Type[4]},
-  grade17:{ name:'',key: '1', course_type: Course_Type[4]},
-  grade25:{ name:'',key: '1', course_type: Course_Type[4]},
-  grade11:{ name:'ថ្នាក់ទី 11',key: '1', course_type: Course_Type[5]},
-  grade14:{ name:'',key: '1', course_type: Course_Type[5]},
-  grade15:{ name:'',key: '1', course_type: Course_Type[5]},
-  grade12:{ name:'ថ្នាក់ទី 12',key: '1', course_type: Course_Type[6]},
-  grade26:{ name:'',key: '1', course_type: Course_Type[6]},
-  grade27:{ name:'',key: '1', course_type: Course_Type[6]},
-
-
+  grade7:{ name:'ថ្នាក់ទី 7',key: '7', course_type: Course_Type[1]},
+  grade18:{ name:'',key: '8', course_type: Course_Type[1]},
+  grade8:{ name:'ថ្នាក់ទី 8',key: '9', course_type: Course_Type[2]},
+  grade13:{ name:'',key: '10', course_type: Course_Type[2]},
+  grade9:{ name:'ថ្នាក់ទី 9',key: '11', course_type: Course_Type[3]},
+  grade19:{ name:'',key: '12', course_type: Course_Type[3]},
+  grade10:{ name:'ថ្នាក់ទី 10',key: '13', course_type: Course_Type[4]},
+  grade17:{ name:'',key: '14', course_type: Course_Type[4]},
+  grade25:{ name:'',key: '15', course_type: Course_Type[4]},
+  grade11:{ name:'ថ្នាក់ទី 11',key: '16', course_type: Course_Type[5]},
+  grade14:{ name:'',key: '17', course_type: Course_Type[5]},
+  grade12:{ name:'ថ្នាក់ទី 12',key: '19', course_type: Course_Type[6]},
+  grade26:{ name:'',key: '20', course_type: Course_Type[6]},
+  grade27:{ name:'',key: '21', course_type: Course_Type[6]},
 }
 
 export const COURSE = [
-  {name: 'ភាសាខ្មែរថ្នាក់ទី 1',photo:'assets/grade7.5.png', key: 'course_1', grade_level: GRADE_LEVEL.grade1},
-  {name: 'ភាសាខ្មែរថ្នាក់ទី 2',photo:'assets/grade7.5.png', key: 'course_2', grade_level: GRADE_LEVEL.grade2},
-  {name: 'ភាសាខ្មែរថ្នាក់ទី 3',photo:'assets/grade7.5.png', key: 'course_3', grade_level: GRADE_LEVEL.grade3},
-  {name: 'ភាសាខ្មែរថ្នាក់ទី 4',photo:'assets/grade7.5.png', key: 'course_4', grade_level: GRADE_LEVEL.grade4},
-  {name: 'ភាសាខ្មែរថ្នាក់ទី 5',photo:'assets/grade7.5.png', key: 'course_5', grade_level: GRADE_LEVEL.grade5},
-  {name: 'ភាសាខ្មែរថ្នាក់ទី 6',photo:'assets/grade7.5.png', key: 'course_6', grade_level: GRADE_LEVEL.grade6},
-  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade7.5.png', key: 'course_7', grade_level: GRADE_LEVEL.grade7},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 1',photo:'assets/khmer-1.png', key: 'course_1_1', grade_level: GRADE_LEVEL.grade1},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 1',photo:'assets/maths-1.png', key: 'course_1_2', grade_level: GRADE_LEVEL.grade1},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 1',photo:'assets/scince-1.png', key: 'course_1_3', grade_level: GRADE_LEVEL.grade1},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 2',photo:'assets/grade3.png', key: 'course_2', grade_level: GRADE_LEVEL.grade2},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 2',photo:'assets/grade3.1.png', key: 'course_2', grade_level: GRADE_LEVEL.grade2},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 2',photo:'assets/grade3.2.png', key: 'course_2', grade_level: GRADE_LEVEL.grade2},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 3',photo:'assets/grade4.1.png', key: 'course_3', grade_level: GRADE_LEVEL.grade3},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 3',photo:'assets/grade4.2.png', key: 'course_3', grade_level: GRADE_LEVEL.grade3},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 3',photo:'assets/grade4.3.png', key: 'course_3', grade_level: GRADE_LEVEL.grade3},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 4',photo:'assets/grade4.11.png', key: 'course_4', grade_level: GRADE_LEVEL.grade4},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 4',photo:'assets/grade4.22.png', key: 'course_4', grade_level: GRADE_LEVEL.grade4},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 4',photo:'assets/grade4.33.png', key: 'course_4', grade_level: GRADE_LEVEL.grade4},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 4',photo:'assets/grade4.44.png', key: 'course_4', grade_level: GRADE_LEVEL.grade4},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 5',photo:'assets/grade5.1.png', key: 'course_5', grade_level: GRADE_LEVEL.grade5},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 5',photo:'assets/grade5.2.png', key: 'course_5', grade_level: GRADE_LEVEL.grade5},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 5',photo:'assets/grade5.3.png', key: 'course_5', grade_level: GRADE_LEVEL.grade5},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 5',photo:'assets/grade5.4.png', key: 'course_5', grade_level: GRADE_LEVEL.grade5},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 6',photo:'assets/grade6.3.png', key: 'course_6', grade_level: GRADE_LEVEL.grade6},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 6',photo:'assets/grade6.1.png', key: 'course_6', grade_level: GRADE_LEVEL.grade6},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 6',photo:'assets/grade6.2.png', key: 'course_6', grade_level: GRADE_LEVEL.grade6},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 6',photo:'assets/garde6.4.png', key: 'course_6', grade_level: GRADE_LEVEL.grade6},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade7.png', key: 'course_7', grade_level: GRADE_LEVEL.grade7},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade7.1.png', key: 'course_7', grade_level: GRADE_LEVEL.grade7},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade7.2.png', key: 'course_7', grade_level: GRADE_LEVEL.grade7},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade7.3.png', key: 'course_7', grade_level: GRADE_LEVEL.grade18},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade7.4.png', key: 'course_7', grade_level: GRADE_LEVEL.grade18},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade7.5.png', key: 'course_7', grade_level: GRADE_LEVEL.grade18},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade8.png', key: 'course_7', grade_level: GRADE_LEVEL.grade8},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/garde8.1.png', key: 'course_7', grade_level: GRADE_LEVEL.grade8},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade8.2.png', key: 'course_7', grade_level: GRADE_LEVEL.grade8},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade8.3.png', key: 'course_7', grade_level: GRADE_LEVEL.grade13},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade8.4.png', key: 'course_7', grade_level: GRADE_LEVEL.grade13},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade8.5.png', key: 'course_7', grade_level: GRADE_LEVEL.grade13},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade9.png', key: 'course_7', grade_level: GRADE_LEVEL.grade9},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade9.1.png', key: 'course_7', grade_level: GRADE_LEVEL.grade9},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade9.2.png', key: 'course_7', grade_level: GRADE_LEVEL.grade9},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade9.3.png', key: 'course_7', grade_level: GRADE_LEVEL.grade19},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade9.4.png', key: 'course_7', grade_level: GRADE_LEVEL.grade19},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade9.5.png', key: 'course_7', grade_level: GRADE_LEVEL.grade19},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade10.png', key: 'course_7', grade_level: GRADE_LEVEL.grade10},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade10.1.png', key: 'course_7', grade_level: GRADE_LEVEL.grade10},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade10.2.png', key: 'course_7', grade_level: GRADE_LEVEL.grade10},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade10.3.png', key: 'course_7', grade_level: GRADE_LEVEL.grade17},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade10.4.png', key: 'course_7', grade_level: GRADE_LEVEL.grade17},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade10.5.png', key: 'course_7', grade_level: GRADE_LEVEL.grade17},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade10.6.png', key: 'course_7', grade_level: GRADE_LEVEL.grade25},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade10.7.png', key: 'course_7', grade_level: GRADE_LEVEL.grade25},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade10.8.png', key: 'course_7', grade_level: GRADE_LEVEL.grade25},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade11.png', key: 'course_7', grade_level: GRADE_LEVEL.grade11},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade11.1.png', key: 'course_7', grade_level: GRADE_LEVEL.grade11},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade11.2.png', key: 'course_7', grade_level: GRADE_LEVEL.grade11},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade11.3.png', key: 'course_7', grade_level: GRADE_LEVEL.grade14},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade11.4.png', key: 'course_7', grade_level: GRADE_LEVEL.grade14},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade11.5.png', key: 'course_7', grade_level: GRADE_LEVEL.grade14},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade12.png', key: 'course_7', grade_level: GRADE_LEVEL.grade12},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade12.1.png', key: 'course_7', grade_level: GRADE_LEVEL.grade12},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade12.2.png', key: 'course_7', grade_level: GRADE_LEVEL.grade12},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade12.3.png', key: 'course_7', grade_level: GRADE_LEVEL.grade26},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade12.4.png', key: 'course_7', grade_level: GRADE_LEVEL.grade26},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade12.5.png', key: 'course_7', grade_level: GRADE_LEVEL.grade26},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade12.6.png', key: 'course_7', grade_level: GRADE_LEVEL.grade27},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade12.7.png', key: 'course_7', grade_level: GRADE_LEVEL.grade27},
+  {name: 'ភាសាខ្មែរថ្នាក់ទី 7',photo:'assets/grade12.8.png', key: 'course_7', grade_level: GRADE_LEVEL.grade27},
 
 ]
 
@@ -130,6 +181,5 @@ export const LESSON = [
   { name: 'រៀនគូសបន្ទាត់ និងខ្សែកោ ភាគ១', key: 'lVT_OH09lEI',course:COURSE[0] },
   { name: 'រៀនគូសបន្ទាត់ និងខ្សែកោ ភាគ២', key: 'UovVqmQctew',course:COURSE[1] },
   { name: 'មេរៀនទី៣ ចម្រៀងព្យញ្ជនៈ', key: 'f28AfqF9_UM',course:COURSE[2] },
-
 ]
 

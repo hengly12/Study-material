@@ -4,7 +4,7 @@
     <p>{{item?.name}}</p>
     <div class="box-grade">
       <div class="box" *ngFor="let i of item?.courses" (click)="isClick()">
-        <img *ngFor="let item of Course_TypeKey" [routerLink]="item?.url"  [src]="i?.photo" alt="">
+        <img [routerLink]="i.key" [src]="i?.photo" alt="">
         <span>
           <!-- {{i?.name}} -->
         </span>
@@ -12,6 +12,7 @@
     </div>
   </div>
 </div>
+
 
 
 
