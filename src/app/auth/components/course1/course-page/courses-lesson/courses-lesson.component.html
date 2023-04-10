@@ -1,4 +1,36 @@
-<p>hello</p>
+<!-- <p>hello</p>
 <div>
   selected lesson: {{selectedLesson?.name}}
+
+</div> -->
+<div class="container">
+  <mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+
+
+        <mat-accordion>
+          <mat-expansion-panel style="border-radius: 0; border: 1px solid #fff;">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+               <p style="margin: 0;font-family: 'Noto Sans Khmer', sans-serif;
+               font-size: 16px;padding: 0 10px;" *ngFor="let item of GradeName">{{item?.name}}</p>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p style="font-family: 'Noto Sans Khmer', sans-serif;
+            font-size: 16px;cursor: pointer;border-bottom: 1px solid #999;" *ngFor="let item of LESSON" [routerLink]="['/courseslesson/'+item?.key]" routerLinkActive="active">{{item?.name}}</p>
+          </mat-expansion-panel>
+        </mat-accordion>
+    </mat-drawer>
+      <button type="button" mat-button (click)="drawer.toggle()" style="border: 2px solid #E0E0E0;margin-top: 3px;">
+
+        Open Lesson<i style="padding: 0 3px;" class="fa-solid fa-arrow-right-to-bracket"></i>
+
+      </button>
+    <div class="example-sidenav-content" style="display: flex;flex-direction: column;">
+      <p style="font-family: 'Noto Sans Khmer', sans-serif;
+      font-size: 16px;cursor: pointer; font-size: 30px;" *ngFor="let item of GradeName">{{item?.name}}</p>
+      <router-outlet></router-outlet>
+    </div>
+
+  </mat-drawer-container>
 </div>

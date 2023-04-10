@@ -31,6 +31,7 @@ import { SwiperComponent } from './auth/components/swiper/swiper.component';
 import { FrontMainLayoutComponent } from './auth/layout/front-main-layout/front-main-layout.component';
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
+import { LessonOfCoursesComponent } from './auth/components/lesson-of-courses/lesson-of-courses.component';
 
 
 
@@ -104,6 +105,19 @@ const routes: Routes = [
           {
             path: 'bookstories',
             component: BookStoriesComponent,
+          },
+        ]
+      },
+
+      {
+        path: 'courseslesson',  component: CoursesLessonComponent,
+        children:[
+          {
+            path:':id',component: LessonOfCoursesComponent,
+          },
+          {
+            path: 'lessonofcourses',
+            component: LessonOfCoursesComponent,
           },
         ]
       },

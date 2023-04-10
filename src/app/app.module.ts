@@ -54,6 +54,7 @@ import { Grade10ExperimentComponent } from './auth/components/experiment-all/gra
 import { CoursePageComponent } from './auth/components/course1/course-page/course-page.component';
 import { Course1Component } from './auth/components/course1/course1.component';
 import { CoursesLessonComponent } from './auth/components/course1/course-page/courses-lesson/courses-lesson.component';
+import { LessonOfCoursesComponent } from './auth/components/lesson-of-courses/lesson-of-courses.component';
 
 
 
@@ -98,6 +99,7 @@ import { CoursesLessonComponent } from './auth/components/course1/course-page/co
     CoursePageComponent,
     Course1Component,
     CoursesLessonComponent,
+    LessonOfCoursesComponent
   ],
   imports: [
     BrowserModule,

@@ -88,6 +88,12 @@
   .lesson-container h4{
     padding: 15px 30px;
   }
+  .lesson-container .grade-1 p{
+    padding: 0 30px;
+  }
+  .lesson-container .grade-2 p{
+    padding: 0 30px;
+  }
   .lesson-container .grade-1 .box-grade{
     display: grid;
     grid-template-columns: repeat(2, 1fr);

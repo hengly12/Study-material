@@ -96,13 +96,12 @@
         gap: 30px;
         padding: 0 300px;
         li{
-          color: #fff;
+          color: #e33535;
           list-style: none;
           font-size: 18px;
           font-family: 'Source Sans Pro', sans-serif;
           cursor: pointer;
         }
-
         .dropdown{
           p{
             z-index: 4;
@@ -416,6 +415,9 @@
 
 
   }
+  .navbar-container .bottom .right  {
+    height: 10vh;
+  }
   .navbar-container .bottom  .burger{
     display: block;
     padding: 0 15px;
@@ -459,7 +461,14 @@
     width: 100px;
   }
 }
+// @media screen and (max-width: 900px){
+//   .navbar-container .bottom .right .btn {
 
+//   }
+//   .navbar-container .bottom .right .profile{
+
+//   }
+// }
 @media screen and (max-width: 724px){
   .navbar-container .bottom .right .btn {
     margin-left: 50px;
@@ -469,6 +478,7 @@
   .navbar-container .bottom .right .btn {
     margin-left: 50px;
   }
+
 }
 @media screen and (max-width: 514px){
   .navbar-container .bottom .right .btn {

@@ -27,7 +27,7 @@
       font-family: 'Source Sans Pro', sans-serif;
     }
     .box-grade{
-      height: 40vh;
+      height: auto;
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -61,7 +61,7 @@
       font-family: 'Source Sans Pro', sans-serif;
     }
     .box-grade{
-      height: 40vh;
+      height: auto;
       width: 100%;
       display: flex;
       flex-direction: row;
@@ -79,5 +79,41 @@
         }
       }
     }
+  }
+}
+@media screen and (max-width: 1024px){
+  .lesson-container{
+    height: auto;
+  }
+  .lesson-container h4{
+    padding: 15px 30px;
+  }
+  .lesson-container .grade-1 p{
+    padding: 0 30px;
+  }
+  .lesson-container .grade-2 p{
+    padding: 0 30px;
+  }
+  .lesson-container .grade-1 .box-grade{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+  .lesson-container .grade-2 .box-grade{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+}
+@media screen and (max-width: 500px){
+  .lesson-container .grade-1 .box-grade{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+  }
+  .lesson-container .grade-2 .box-grade{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
   }
 }
