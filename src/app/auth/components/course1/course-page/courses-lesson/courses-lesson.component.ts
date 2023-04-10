@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
-import { LESSON } from 'src/app/dummy/data-khmer';
+import { GRADE_NAME, LESSON } from 'src/app/dummy/data-khmer';
 
 
 @Component({
@@ -18,6 +18,7 @@ export class CoursesLessonComponent {
   selectedLesson: any;
 
   LESSON = LESSON;
+  GradeName = GRADE_NAME;
 
   constructor(
     private activatedRoute : ActivatedRoute,

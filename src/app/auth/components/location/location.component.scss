@@ -84,3 +84,23 @@
     }
   }
 }
+@media screen and (max-width: 1000px){
+  .footer-container{
+    height: auto;
+  }
+}
+@media screen and (max-width: 700px){
+  .location-container iframe{
+    height: 270px;
+    width: 370px;
+  }
+  .footer-container .privacy{
+    padding: 0 30px;
+  }
+  .footer-container .privacy p{
+    font-size: 12px;
+  }
+  .footer-container .privacy .follow p{
+    font-size: 12px;
+  }
+}

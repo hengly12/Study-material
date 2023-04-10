@@ -90,3 +90,28 @@
     }
   }
 }
+@media screen and (max-width: 1000px){
+  .contact-container .email p{
+    font-size: 27px;
+  }
+  .footer-container{
+    height: auto;
+  }
+}
+@media screen and (max-width: 700px){
+  .footer-container .privacy{
+    padding: 0 30px;
+  }
+  .footer-container .privacy p{
+    font-size: 12px;
+  }
+  .footer-container .privacy .follow p{
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 500px){
+  .contact-container .email p{
+    font-size: 20px;
+  }
+
+}

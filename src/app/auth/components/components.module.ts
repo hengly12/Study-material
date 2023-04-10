@@ -12,8 +12,6 @@ import { ComponentsRoutingModule } from './components-routing.module';
   ],
   declarations: [
 
-
-
   ],
 })
 export class ComponentsModule { }

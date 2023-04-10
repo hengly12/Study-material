@@ -183,3 +183,8 @@ export const LESSON = [
   { name: 'មេរៀនទី៣ ចម្រៀងព្យញ្ជនៈ', key: 'f28AfqF9_UM',course:COURSE[2] },
 ]
 
+export const GRADE_NAME = [
+  { name: 'ថ្នាក់ទី១', key: 'course_1_2', grade_level: GRADE_LEVEL.grade1},
+
+]
+
