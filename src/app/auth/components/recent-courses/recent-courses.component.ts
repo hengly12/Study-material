@@ -43,7 +43,7 @@ export class RecentCoursesComponent {
     if(this.dataUser?.key == null){
       this.router.navigate(['login'])
     } else{
-      this.router.navigate(['../grade10-experiment'])
+      this.router.navigate(['/lesson'])
     }
   }
 }

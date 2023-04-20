@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { ActivatedRoute, Router } from '@angular/router';
-import { GRADE_NAME, LESSON } from 'src/app/dummy/data-khmer';
+import { COURSE, GRADE_NAME, LESSON } from 'src/app/dummy/data-khmer';
 
 
 @Component({
@@ -15,10 +15,8 @@ export class CoursesLessonComponent {
   uid: string = '';
   inOut:string='';
 
-  selectedLesson: any;
-
+  selectedCourse: any;
   LESSON = LESSON;
-  GradeName = GRADE_NAME;
 
   constructor(
     private activatedRoute : ActivatedRoute,
@@ -46,11 +44,9 @@ export class CoursesLessonComponent {
     });
 
     this.activatedRoute.params.subscribe(params=>{
-      const { courseKey,lessonKey } = params
-      console.log('courseTypeKey',courseKey)
-      if(lessonKey && lessonKey !== 'na'){
-        this.selectedLesson = this.LESSON.find(f=>f.key === lessonKey)
-      }
+      const { courseKey } = params
+      this.selectedCourse = COURSE.find(f=>f.key === courseKey)
+      this.LESSON = LESSON.filter(f=>f?.course?.key === courseKey)
     })
   }
 }

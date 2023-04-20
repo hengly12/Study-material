@@ -9,4 +9,10 @@
     font-size: 18px;
   }
 }
+@media screen and (max-width: 1000px){
+  .container iframe{
+    width: 300px;
+
+  }
+}
 

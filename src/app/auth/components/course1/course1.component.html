@@ -23,8 +23,8 @@
     <h3>Course Type</h3>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto est consectetur fugit mollitia omnis eaque ea provident praesentium totam dicta.</p>
   </div>
-  <div class="course-box">
-    <div class="box-1" *ngFor="let item of Course_Type" [routerLink]="item?.url" (click)="isClick()">
+  <div class="course-box" >
+    <div class="box-1" *ngFor="let item of Course_Type" [routerLink]="item?.url" (click)="isClick()" >
       <p>{{item?.name}}</p>
       <div class="grade">
         <p>{{item?.name}}</p>

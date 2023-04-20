@@ -98,11 +98,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
+
   }
   .lesson-container .grade-2 .box-grade{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
+
   }
 }
 @media screen and (max-width: 500px){
