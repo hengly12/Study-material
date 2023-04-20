@@ -6,6 +6,7 @@
 .contact-container{
   height: 40vh;
   width: 100%;
+
   .email{
     height: 40vh;
     width: 100%;
@@ -14,7 +15,8 @@
     align-items: center;
     justify-content: center;
     gap: 20px;
-    background-color: #00B4A8;
+    background: linear-gradient(43deg, black, transparent);
+
     p{
       // padding: 15px 0;
       font-size: 30px;

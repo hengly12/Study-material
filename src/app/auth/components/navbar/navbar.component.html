@@ -28,19 +28,19 @@
         <li [routerLink]="['/components']" routerLinkActive="active" style="color: #fff;">Home</li>
         <li style="color: #fff;" [routerLink]="['/lesson']" routerLinkActive="active" (click)="isClick1()">Books</li>
         <li class="dropdown">
-          <p [routerLink]="['../classes']" routerLinkActive="active" >Class</p>
+          <p  >Class</p>
           <div class="dropdown-content" >
             <div class="navbar">
               <div class="dd_menu">
                 <div class="home">
                   <div class="list-menu">
-                    <p [routerLink]="['../lesson6']" routerLinkActive="active" (click)="isClick2()">Grade 1-6</p>
-                    <p [routerLink]="['../lesson7']" routerLinkActive="active" (click)="isClick3()">Grade 7</p>
-                    <p [routerLink]="['../lesson8']" routerLinkActive="active" (click)="isClick4()">Grade 8</p>
-                    <p [routerLink]="['../lesson9']" routerLinkActive="active" (click)="isClick5()">Grade 9</p>
-                    <p [routerLink]="['../lesson10']" routerLinkActive="active" (click)="isClick6()">Grade 10</p>
-                    <p [routerLink]="['../lesson11']" routerLinkActive="active" (click)="isClick7()">Grade 11</p>
-                    <p [routerLink]="['../lesson12']" routerLinkActive="active" (click)="isClick8()">Grade 12</p>
+                    <p [routerLink]="['/lesson6']" routerLinkActive="active" (click)="isClick2()">Grade 1-6</p>
+                    <p [routerLink]="['/lesson7']" routerLinkActive="active" (click)="isClick3()">Grade 7</p>
+                    <p [routerLink]="['/lesson8']" routerLinkActive="active" (click)="isClick4()">Grade 8</p>
+                    <p [routerLink]="['/lesson9']" routerLinkActive="active" (click)="isClick5()">Grade 9</p>
+                    <p [routerLink]="['/lesson10']" routerLinkActive="active" (click)="isClick6()">Grade 10</p>
+                    <p [routerLink]="['/lesson11']" routerLinkActive="active" (click)="isClick7()">Grade 11</p>
+                    <p [routerLink]="['/lesson12']" routerLinkActive="active" (click)="isClick8()">Grade 12</p>
                     <p>Skill</p>
                   </div>
                 </div>
@@ -48,7 +48,7 @@
             </div>
           </div>
         </li>
-        <li style="color: #fff;" [routerLink]="['../category']" routerLinkActive="active" (click)="isClick9()">Category</li>
+        <li style="color: #fff;" [routerLink]="['/category']" routerLinkActive="active" (click)="isClick9()">Category</li>
       </ul>
       <div class="btn" *ngIf="logContainer">
         <button [routerLink]="['login']" routerLinkActive="active">Login</button>

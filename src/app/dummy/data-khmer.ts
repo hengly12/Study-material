@@ -112,8 +112,8 @@ export const GRADE_LEVEL = {
 
 export const COURSE = [
   {name: 'ភាសាខ្មែរថ្នាក់ទី 1',photo:'assets/khmer-1.png', key: 'course_1_1', grade_level: GRADE_LEVEL.grade1},
-  {name: 'ភាសាខ្មែរថ្នាក់ទី 1',photo:'assets/maths-1.png', key: 'course_1_2', grade_level: GRADE_LEVEL.grade1},
-  {name: 'ភាសាខ្មែរថ្នាក់ទី 1',photo:'assets/scince-1.png', key: 'course_1_3', grade_level: GRADE_LEVEL.grade1},
+  {name: 'គណិតវិទ្យាថ្នាក់ទី 1',photo:'assets/maths-1.png', key: 'course_1_2', grade_level: GRADE_LEVEL.grade1},
+  {name: 'វិទ្យាសាស្រ្ត សិក្សាសង្គមថ្នាក់ទី 1',photo:'assets/scince-1.png', key: 'course_1_3', grade_level: GRADE_LEVEL.grade1},
   {name: 'ភាសាខ្មែរថ្នាក់ទី 2',photo:'assets/grade3.png', key: 'course_2', grade_level: GRADE_LEVEL.grade2},
   {name: 'ភាសាខ្មែរថ្នាក់ទី 2',photo:'assets/grade3.1.png', key: 'course_2', grade_level: GRADE_LEVEL.grade2},
   {name: 'ភាសាខ្មែរថ្នាក់ទី 2',photo:'assets/grade3.2.png', key: 'course_2', grade_level: GRADE_LEVEL.grade2},
@@ -179,12 +179,14 @@ export const COURSE = [
 
 export const LESSON = [
   { name: 'រៀនគូសបន្ទាត់ និងខ្សែកោ ភាគ១', key: 'lVT_OH09lEI',course:COURSE[0] },
-  { name: 'រៀនគូសបន្ទាត់ និងខ្សែកោ ភាគ២', key: 'UovVqmQctew',course:COURSE[1] },
-  { name: 'មេរៀនទី៣ ចម្រៀងព្យញ្ជនៈ', key: 'f28AfqF9_UM',course:COURSE[2] },
+  { name: 'រៀនគូសបន្ទាត់ និងខ្សែកោ ភាគ២', key: 'UovVqmQctew',course:COURSE[0] },
+  { name: 'មេរៀនទី៣ ចម្រៀងព្យញ្ជនៈ', key: 'f28AfqF9_UM',course:COURSE[1] },
+  { name: 'ស្ពានទី១ ព្យព្ជានៈ ក ខ ', key: '7ZNsztL_6H0',course:COURSE[2] },
+  { name: 'ស្ពានទី១ ព្យព្ជានៈ ក ខ (តចប់)', key: 'ntaGuypCJPk',course:COURSE[4] },
 ]
 
 export const GRADE_NAME = [
-  { name: 'ថ្នាក់ទី១', key: 'course_1_2', grade_level: GRADE_LEVEL.grade1},
+  { name: 'ថ្នាក់ទី១', key: 'course_1_2', course:COURSE[0]},
 
 ]
 

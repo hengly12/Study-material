@@ -32,6 +32,7 @@ import { FrontMainLayoutComponent } from './auth/layout/front-main-layout/front-
 import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { LessonOfCoursesComponent } from './auth/components/lesson-of-courses/lesson-of-courses.component';
+import { LessonDisplayComponent } from './auth/components/course1/course-page/courses-lesson/lesson-display/lesson-display.component';
 
 
 
@@ -55,9 +56,10 @@ const routes: Routes = [
     ]
   },
   {
-    path:'course/:courseTypeKey/:courseKey',component: FrontMainLayoutComponent,children:[
-      {path:'',redirectTo:'na',pathMatch:'full'},
-      {path:':lessonKey', component: CoursesLessonComponent}
+    path:'course/:courseTypeKey',component: FrontMainLayoutComponent,children:[
+      {path:':courseKey', component: CoursesLessonComponent,children:[
+        {path: ':lessonKey', component:LessonDisplayComponent}
+      ]}
     ]
   },
   {

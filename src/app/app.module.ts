@@ -55,8 +55,7 @@ import { CoursePageComponent } from './auth/components/course1/course-page/cours
 import { Course1Component } from './auth/components/course1/course1.component';
 import { CoursesLessonComponent } from './auth/components/course1/course-page/courses-lesson/courses-lesson.component';
 import { LessonOfCoursesComponent } from './auth/components/lesson-of-courses/lesson-of-courses.component';
-
-
+import { LessonDisplayComponent } from './auth/components/course1/course-page/courses-lesson/lesson-display/lesson-display.component';
 
 
 @NgModule({
@@ -99,7 +98,8 @@ import { LessonOfCoursesComponent } from './auth/components/lesson-of-courses/le
     CoursePageComponent,
     Course1Component,
     CoursesLessonComponent,
-    LessonOfCoursesComponent
+    LessonOfCoursesComponent,
+    LessonDisplayComponent
   ],
   imports: [
     BrowserModule,
