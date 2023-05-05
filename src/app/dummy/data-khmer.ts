@@ -180,9 +180,24 @@ export const COURSE = [
 export const LESSON = [
   { name: 'រៀនគូសបន្ទាត់ និងខ្សែកោ ភាគ១', key: 'lVT_OH09lEI',course:COURSE[0] },
   { name: 'រៀនគូសបន្ទាត់ និងខ្សែកោ ភាគ២', key: 'UovVqmQctew',course:COURSE[0] },
-  { name: 'មេរៀនទី៣ ចម្រៀងព្យញ្ជនៈ', key: 'f28AfqF9_UM',course:COURSE[1] },
-  { name: 'ស្ពានទី១ ព្យព្ជានៈ ក ខ ', key: '7ZNsztL_6H0',course:COURSE[2] },
-  { name: 'ស្ពានទី១ ព្យព្ជានៈ ក ខ (តចប់)', key: 'ntaGuypCJPk',course:COURSE[4] },
+  { name: 'មេរៀនទី៣ ចម្រៀងព្យញ្ជនៈ', key: 'f28AfqF9_UM',course:COURSE[0] },
+  { name: 'ស្ពានទី១ ព្យព្ជានៈ ក ខ ', key: '7ZNsztL_6H0',course:COURSE[1] },
+  { name: 'ស្ពានទី១ ព្យព្ជានៈ ក ខ (តចប់)', key: 'ntaGuypCJPk',course:COURSE[2] },
+  { name:'ស្ពានទី១ ព្យព្ជានៈ កខចឆ ផ្សំស្រៈឹ',key: '1aRpFGPI0Ew',course:COURSE[4]},
+  { name:'ស្ពានទី១ ព្យព្ជានៈ កខចឆ ផ្សំស្រៈឹ (តចប់)',key: 'MjS0SarXWV8',course:COURSE[5]},
+  { name:'ស្ពានទី១ ព្យព្ជានៈ កខចឆ ផ្សំស្រៈើ',key: 'iCWgTQmqYpk',course:COURSE[6]},
+  { name:'ស្ពានទី១ ព្យព្ជានៈ កខចឆ ផ្សំស្រៈើ (តចប់)',key: 'p5TdIG5b-04',course:COURSE[7]},
+  { name:'ស្ពានទី១ ព្យព្ជានៈ កខចឆ ផ្សំស្រៈើ (តចប់)',key: 'p5TdIG5b-04',course:COURSE[8]},
+  { name:'ស្ពានទី១ ព្យព្ជានៈ កខចឆ ផ្សំស្រៈើ (តចប់)',key: 'p5TdIG5b-04',course:COURSE[9]},
+  { name:'ស្ពានទី១ ព្យព្ជានៈ កខចឆ ផ្សំស្រៈើ (តចប់)',key: 'p5TdIG5b-04',course:COURSE[10]},
+  { name:'ស្ពានទី១ ព្យព្ជានៈ កខចឆ ផ្សំស្រៈើ (តចប់)',key: 'p5TdIG5b-04',course:COURSE[11]},
+  { name:'ស្ពានទី១ ព្យព្ជានៈ កខចឆ ផ្សំស្រៈើ (តចប់)',key: 'p5TdIG5b-04',course:COURSE[7]},
+  { name:'ស្ពានទី១ ព្យព្ជានៈ កខចឆ ផ្សំស្រៈើ (តចប់)',key: 'p5TdIG5b-04',course:COURSE[7]},
+  { name:'ស្ពានទី១ ព្យព្ជានៈ កខចឆ ផ្សំស្រៈើ (តចប់)',key: 'p5TdIG5b-04',course:COURSE[7]},
+  { name:'ស្ពានទី១ ព្យព្ជានៈ កខចឆ ផ្សំស្រៈើ (តចប់)',key: 'p5TdIG5b-04',course:COURSE[7]},
+  { name:'ស្ពានទី១ ព្យព្ជានៈ កខចឆ ផ្សំស្រៈើ (តចប់)',key: 'p5TdIG5b-04',course:COURSE[7]},
+  { name:'ស្ពានទី១ ព្យព្ជានៈ កខចឆ ផ្សំស្រៈើ (តចប់)',key: 'p5TdIG5b-04',course:COURSE[7]},
+
 ]
 
 export const GRADE_NAME = [

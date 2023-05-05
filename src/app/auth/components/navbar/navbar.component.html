@@ -1,3 +1,25 @@
+<div class="uploader-status" *ngIf="loading">
+  <!-- <mat-spinner></mat-spinner> -->
+
+  <div class="blobs">
+    <div class="blob-center"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+  </div>
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+        <feBlend in="SourceGraphic" in2="goo" />
+      </filter>
+    </defs>
+  </svg>
+</div>
 <div class="navbar-container">
   <div class="top">
 
@@ -26,7 +48,7 @@
 
       <ul>
         <li [routerLink]="['/components']" routerLinkActive="active" style="color: #fff;">Home</li>
-        <li style="color: #fff;" [routerLink]="['/lesson']" routerLinkActive="active" (click)="isClick1()">Books</li>
+        <li style="color: #fff;" [routerLink]="['/lesson']" routerLinkActive="active" >Books</li>
         <li class="dropdown">
           <p  >Class</p>
           <div class="dropdown-content" >
@@ -34,13 +56,13 @@
               <div class="dd_menu">
                 <div class="home">
                   <div class="list-menu">
-                    <p [routerLink]="['/lesson6']" routerLinkActive="active" (click)="isClick2()">Grade 1-6</p>
-                    <p [routerLink]="['/lesson7']" routerLinkActive="active" (click)="isClick3()">Grade 7</p>
-                    <p [routerLink]="['/lesson8']" routerLinkActive="active" (click)="isClick4()">Grade 8</p>
-                    <p [routerLink]="['/lesson9']" routerLinkActive="active" (click)="isClick5()">Grade 9</p>
-                    <p [routerLink]="['/lesson10']" routerLinkActive="active" (click)="isClick6()">Grade 10</p>
-                    <p [routerLink]="['/lesson11']" routerLinkActive="active" (click)="isClick7()">Grade 11</p>
-                    <p [routerLink]="['/lesson12']" routerLinkActive="active" (click)="isClick8()">Grade 12</p>
+                    <p [routerLink]="['/lesson6']" routerLinkActive="active" >Grade 1-6</p>
+                    <p [routerLink]="['/lesson7']" routerLinkActive="active" >Grade 7</p>
+                    <p [routerLink]="['/lesson8']" routerLinkActive="active" >Grade 8</p>
+                    <p [routerLink]="['/lesson9']" routerLinkActive="active" >Grade 9</p>
+                    <p [routerLink]="['/lesson10']" routerLinkActive="active" >Grade 10</p>
+                    <p [routerLink]="['/lesson11']" routerLinkActive="active" >Grade 11</p>
+                    <p [routerLink]="['/lesson12']" routerLinkActive="active" >Grade 12</p>
                     <p>Skill</p>
                   </div>
                 </div>
@@ -65,7 +87,7 @@
           <mat-icon style="color: #5459E8;">person</mat-icon>
           <span>Edit Profile</span>
         </button>
-        <div class="sign-out" mat-menu-item (click)="signOut()" (click)="reloadPage()">
+        <div class="sign-out" mat-menu-item (click)="signOut()" >
           <mat-icon style="color: #5459E8;">logout</mat-icon>
           <span>Sign Out</span>
           {{inOut}}
@@ -90,13 +112,13 @@
                <p [routerLink]="['/classes']" routerLinkActive="active" style="margin: 0px;">Class</p>
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <p [routerLink]="['/lesson6']" routerLinkActive="active" (click)="isClick2()" (click)="toggleMenu()">Grade 1-6</p>
-            <p [routerLink]="['/lesson7']" routerLinkActive="active" (click)="isClick3()" (click)="toggleMenu()">Grade 7</p>
-            <p [routerLink]="['/lesson8']" routerLinkActive="active" (click)="isClick4()" (click)="toggleMenu()">Grade 8</p>
-            <p [routerLink]="['/lesson9']" routerLinkActive="active" (click)="isClick5()" (click)="toggleMenu()">Grade 9</p>
-            <p [routerLink]="['/lesson10']" routerLinkActive="active" (click)="isClick6()" (click)="toggleMenu()">Grade 10</p>
-            <p [routerLink]="['/lesson11']" routerLinkActive="active" (click)="isClick7()" (click)="toggleMenu()">Grade 11</p>
-            <p [routerLink]="['/lesson12']" routerLinkActive="active" (click)="isClick8()" (click)="toggleMenu()">Grade 12</p>
+            <p [routerLink]="['/lesson6']" routerLinkActive="active"  (click)="toggleMenu()">Grade 1-6</p>
+            <p [routerLink]="['/lesson7']" routerLinkActive="active"  (click)="toggleMenu()">Grade 7</p>
+            <p [routerLink]="['/lesson8']" routerLinkActive="active"  (click)="toggleMenu()">Grade 8</p>
+            <p [routerLink]="['/lesson9']" routerLinkActive="active"  (click)="toggleMenu()">Grade 9</p>
+            <p [routerLink]="['/lesson10']" routerLinkActive="active" (click)="toggleMenu()">Grade 10</p>
+            <p [routerLink]="['/lesson11']" routerLinkActive="active" (click)="toggleMenu()">Grade 11</p>
+            <p [routerLink]="['/lesson12']" routerLinkActive="active" (click)="toggleMenu()">Grade 12</p>
             <p>Skill</p>
           </mat-expansion-panel>
         </mat-accordion>
