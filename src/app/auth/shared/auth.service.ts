@@ -22,24 +22,30 @@ relationship:string = '';
 
   //login method
   login(email : string, password : string,){
-    this.fireauth.signInWithEmailAndPassword(email,password).then( () => {
-      localStorage.setItem('token', 'true',)
+    this.fireauth.signInWithEmailAndPassword(email,password).then( (res) => {
+      localStorage.setItem('uid', res?.user?.uid || 'null')
       this.router.navigate(['/components'])
       console.log('login')
     }, err => {
-      alert("No Internet Connected!");
+      alert("Password Not Correct!");
       this.router.navigate(['/login']);
     })
   }
-
   signOut(){
     this.fireauth.signOut().then( () =>{
-      // '/auth/login' ||
+      console.log('log out')
+      localStorage.removeItem('uid')
       this.router.navigate(['../auth'])
 
     }).catch(err => {
       alert("!System error." + err)
     })
+  }
+
+  isLogin(){
+    const token = localStorage.getItem('uid');
+    console.log('token aaa',token)
+    return token ? true : false;
   }
 
   //register
@@ -162,4 +168,5 @@ relationship:string = '';
     //   this.router.navigate(['signup']);
     // })
   }
+
 }

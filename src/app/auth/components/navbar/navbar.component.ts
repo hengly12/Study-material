@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
+import { AuthService } from '../../shared/auth.service';
 
 
 
@@ -16,33 +17,18 @@ export class NavbarComponent implements OnInit {
   uid: string = '';
   inOut:string='';
   drawer: any;
+  loading: boolean = false;
   // router: any;
   constructor(
     private fireauth : AngularFireAuth,
     private afs: AngularFirestore,
     private router: Router,
+    private auth: AuthService,
 
   ) {}
 
   ngOnInit(): void {
 
-    // this.fireauth.onAuthStateChanged(res=>{
-    //   console.log('res',res)
-    //   if(res){
-    //     this.uid = res.uid;
-    //     this.afs.collection("user").doc(this.uid).valueChanges().subscribe(res => {
-    //       console.log('userID', res);
-    //       this.dataUser = res;
-    //       if (this.dataUser != '') {
-    //         this.logContainer = !this.logContainer;
-    //         this.profile = !this.profile;
-    //       } else {
-    //         this.logContainer = true;
-    //         this.profile = !this.profile;
-    //       }
-    //     })
-    //   }
-    // })
 
     this.fireauth.authState.subscribe((user) => {
 
@@ -155,13 +141,21 @@ export class NavbarComponent implements OnInit {
 
 
   signOut(){
+    this.loading = true;
+    console.log('SignOutasdfasdf'	)
     this.fireauth.signOut().then( () =>{
-      // '/auth/login' ||
-      this.router.navigate(['../../../'])
 
+      // '/auth/login' ||
+      console.log('SignOut saaa')
+      localStorage.removeItem('uid')
+      this.auth.userData = null;
+      this.router.navigate(['/components'])
+      this.loading = false;
     }).catch(err => {
       alert("SignOut")
+
     })
+
   }
 
   reloadPage() {

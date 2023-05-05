@@ -33,6 +33,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { LessonOfCoursesComponent } from './auth/components/lesson-of-courses/lesson-of-courses.component';
 import { LessonDisplayComponent } from './auth/components/course1/course-page/courses-lesson/lesson-display/lesson-display.component';
+import { AuthGuard } from './auth/shared/auth.guard';
 
 
 
@@ -84,7 +85,7 @@ const routes: Routes = [
       },
       {
         path: 'all-courses',
-        component: AllCoursesComponent,
+        component: AllCoursesComponent,canActivate: [AuthGuard],
       },
       {
         path: 'grade10-experiment',  component: Grade10ExperimentComponent,
@@ -99,7 +100,7 @@ const routes: Routes = [
         ]
       },
       {
-        path: 'lesson',  component: LessonComponent,
+        path: 'lesson',  component: LessonComponent,canActivate: [AuthGuard],
         children:[
           {
             path:':id',component: BookStoriesComponent,
@@ -133,31 +134,31 @@ const routes: Routes = [
       },
       {
         path: 'lesson6',
-        component: Lesson6Component,
+        component: Lesson6Component,canActivate: [AuthGuard],
       },
       {
         path: 'lesson7',
-        component: Lesson7Component,
+        component: Lesson7Component,canActivate: [AuthGuard],
       },
       {
         path: 'lesson8',
-        component: Lesson8Component,
+        component: Lesson8Component,canActivate: [AuthGuard],
       },
       {
         path: 'lesson9',
-        component: Lesson9Component,
+        component: Lesson9Component,canActivate: [AuthGuard],
       },
       {
         path: 'lesson10',
-        component: Lesson10Component,
+        component: Lesson10Component,canActivate: [AuthGuard],
       },
       {
         path: 'lesson11',
-        component: Lesson11Component,
+        component: Lesson11Component,canActivate: [AuthGuard],
       },
       {
         path: 'lesson12',
-        component: Lesson12Component,
+        component: Lesson12Component,canActivate: [AuthGuard],
       },
 
       {

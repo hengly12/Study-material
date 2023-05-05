@@ -277,7 +277,8 @@ body{
 
           p{
             font-family: 'Open Sans', sans-serif;
-            font-size: 14px;
+            font-size: 20px;
+            padding: 2px 0;
             color: #838A90;
             margin: 0;
           }
@@ -303,7 +304,7 @@ body{
           display: flex;
           flex-direction:row;
           gap: 150px;
-          padding: 20px 0;
+          padding: 10px 0;
           justify-content: center;
           .name{
 
@@ -325,6 +326,7 @@ body{
           flex-direction: row;
           justify-content: center;
           gap: 150px;
+          padding: 10px 0;
         }
         .box3{
           width: 100%;
